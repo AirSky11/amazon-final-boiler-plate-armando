@@ -1,6 +1,26 @@
 https://readme.so/
 https://www.readme-templates.com/
 
+
+### Proyect Tracking
+## Semana 1
+
+# Martes 04/07/2023
+# Jueves 06/07/2023
+# Sabado 08/07/2023
+
+## Semana 2
+
+# Martes 11/07/2023
+# Jueves 13/07/2023
+# Sabado 15/07/2023
+
+## Semana 3
+
+# Martes 18/07/2023
+# Jueves 20/07/2023
+# Sabado 22/07/2023
+
 ## Supabase
 
 Imagina que Supabase es como una caja de herramientas mágica para construir sitios web y aplicaciones. Proporciona muchas herramientas listas para usar que facilitan a los desarrolladores crear experiencias en línea poderosas e interactivas.

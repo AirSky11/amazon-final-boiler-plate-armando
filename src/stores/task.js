@@ -33,5 +33,13 @@ export const useTaskStore = defineStore("tasks", () => {
       id: id,
     });
   };
+  
+
   return { tasksArr, fetchTasks, addTask, deleteTask };
 });
+  
+  
+
+
+
+

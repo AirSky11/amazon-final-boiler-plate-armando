@@ -5,10 +5,10 @@
     </div>
     <div>
         <div class="input-field">
-            <input type="text" placeholder="Add a Task Title - Listen to Kendrick Lamar" v-model="name">
+            <input type="text" placeholder="Add a Task Title" v-model="name">
         </div>
         <div class="input-field">
-            <input type="text" placeholder="Add a Task Description - Look up Kendrick Lamar's FEAR album on spotify and listen to the whole album." v-model="description">
+            <input type="text" placeholder="Add a Task Description" v-model="description">
         </div>
         <button @click="addTask" class="button">Add</button>
     </div>
@@ -20,7 +20,7 @@ import { useTaskStore } from "../stores/task"
 
 const taskStore = useTaskStore();
 
-// variables para los valors de los inputs
+// variables para los valores de los inputs
 const name = ref('');
 const description = ref('');
 
