@@ -59,7 +59,7 @@ const redirect = useRouter();
 // Arrow function to Signin user to supaBase
 const signIn = async () => {
   try {
-    // Escribir comentario, tarea para casa
+    // Funcion para esperar que se autentique la informacion para ejecutar el codigo.
     await useUserStore().signIn(email.value, password.value);
     // Redirects user to the homeView
     redirect.push({ path: "/" });
