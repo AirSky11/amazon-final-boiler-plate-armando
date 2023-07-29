@@ -85,7 +85,13 @@ onMounted(() => {
 });
 </script>
 
-<style></style>
+<style>
+
+.taskComplete {
+  text-decoration: line-through;
+  color: rgb(4, 108 , 78);
+}
+</style>
 
 <!--
 **Hints**
