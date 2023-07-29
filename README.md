@@ -1,6 +1,8 @@
 https://readme.so/
 https://www.readme-templates.com/
 
+### Presentacion del proyecto 29/07/2023
+https://www.canva.com/design/DAFlS_YjbX4/i3NmxllFkzZPdqzwjcuanQ/edit?utm_content=DAFlS_YjbX4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 ### Proyect Tracking
 ## Semana 1
