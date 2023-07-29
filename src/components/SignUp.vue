@@ -1,9 +1,15 @@
 <template>
-  <div class="container">
+  <div class="sign">
+
+  <div id="container" class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+
+    <div class="logo">
+      <img src="../img/logo-mascaras.png" alt="">
+    </div> 
 
     <div class="header">
       <div class="header-description">
-        <h3 class="header-title">Register to ToDo App</h3>
+        <h3 id="header-title" class="text-xl font-medium text-gray-900 dark:text-white">Register to ToDo App</h3>
         <p class="header-subtitle">Start organizing your tasks!</p>
       </div>
     </div>
@@ -11,10 +17,10 @@
     <form @submit.prevent="signUp" class="form-sign-in">
       <div class="form">
         <div class="form-input">
-          <label class="input-field-label">E-mail</label>
+          <label id="input-field-label" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">E-mail</label>
           <input
             type="email"
-            class="input-field"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
             placeholder="example@gmail.com"
             id="email"
             v-model="email"
@@ -22,10 +28,10 @@
           />
         </div>
         <div class="form-input">
-          <label class="input-field-label">Password</label>
+          <label id="input-field-label" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
           <input
             type="password"
-            class="input-field"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
             placeholder="**********"
             id="password"
             v-model="password"
@@ -33,17 +39,20 @@
           />
         </div>
         <div class="form-input">
-          <label class="input-field-label">Confirm password</label>
+          <label id="input-field-label" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm password</label>
           <input
             type="password"
-            class="input-field"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
             placeholder="**********"
             id="confirmPassword"
             v-model="confirmPassword"
             required
           />
         </div>
-        <button class="button" type="submit">Sign Up</button>
+        
+        <div class="buttons">
+        <button id="button" class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" type="submit">Sign Up</button>
+        
         <p>
           Have an account?
           <PersonalRouter
@@ -52,10 +61,12 @@
             class="sign-up-link"
           />
         </p>
+        </div>
       </div>
     </form>
 
     <div v-show="errorMsg">{{errorMsg}}</div>
+  </div>
   </div>
 </template>
 
@@ -104,4 +115,13 @@ const signUp = async () => {
 };
 </script>
 
-<style></style>
+<style>
+.sign {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+</style>

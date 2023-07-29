@@ -17,7 +17,8 @@ export const useUserStore = defineStore("user", {
         .select()
         .match({ user_id: this.user.id })
 
-        if (profile) this.profile = profile[0];
+         if (profile) this.profile = profile[0];
+      
         console.log('user in store: ', this.user);
         console.log('profile in store: ', this.profile);
       }
@@ -28,10 +29,7 @@ export const useUserStore = defineStore("user", {
         email: email,
         password: password,
       });
-      if (error) {
-        throw error;
-      }
-
+      if (error) throw error;
       if (user) {
         this.user = user;
         console.log(this.user);

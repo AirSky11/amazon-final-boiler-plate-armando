@@ -24,13 +24,9 @@ onMounted(async () => {
       appReady.value = true;
       router.push({ path: "/auth/login" });
     } else {
-      const currentRoute = router.currentRoute.value;
-      if (currentRoute) {
-        router.push(currentRoute.fullPath);
-      } else {
-        router.push({ path: "/" });
+      // continue to dashboard
+      router.push({ path: "/" });
     }
-  }
   } catch (e) {
     console.log(e);
   }
@@ -38,4 +34,3 @@ onMounted(async () => {
 </script>
 
 <style></style>
-

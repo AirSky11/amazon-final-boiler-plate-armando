@@ -1,69 +1,57 @@
-<!-- <template>
-  <div class="wrapper">
-    <Nav />
-
-    <div class="content"> 
-      <h3>Your account:</h3>
-      <router-link to="/account">Account</router-link>
-    </div>
-    <NewTask />
-    <h1>Tasks:</h1>
-    <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
-  </div>
-</template>
-
-<script setup>
-import { ref, onUpdated, onMounted } from 'vue'
-import { useTaskStore } from "../stores/task";
-import { useRouter } from 'vue-router';
-import Nav from '../components/Nav.vue';
-import NewTask from '../components/NewTask.vue';
-import TaskItem from '../components/TaskItem.vue';
-import Footer from '../components/Footer.vue';
-
-//Funcion para almacenamiento de tareas realicionadas con useTaskStore
-const taskStore = useTaskStore();
-
-//Funcion con una matriz con tareas almacenadas, computando automaticamente cuando "taskStore.tasksArr".
-const tasks =computed(() => taskStore.tasksArr);
-console.log("taskComputed:", tasks.value);
-
-//Funcion que se ejecuta cuando el componente se monta en el DOM.
-onMounted()
-
-</script> -->
-
 <template>
   <div class="wrapper">
     <Nav />
-    <div class="content">
-      <h3>Your account:</h3>
-      <router-link to="/account">Account</router-link>
+
+    <main>
+    <div id="content" class="max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"> 
+      <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Your account:</h3>
+      <router-link to="/account"  id="sign-up-link" class="mb-3 font-normal text-gray-700 dark:text-gray-400"><p>Account</p></router-link>
     </div>
+    
+  <div id="taskContainer" class=" p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">  
     <NewTask />
-    <h1>Tasks:</h1>
+    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Tasks:</h2>
+    <div class="containerTask">
     <TaskItem v-for="task in tasks" :key="task.id" :task="task" @taskDeleted="handleTaskDeleted(task)" />
+    </div>  
+  </div>
+
+    <!-- Integra el componente Profile -->
+    <Profile :session="session" />
+    </main>
+    <Footer />
   </div>
 </template>
+
 <script setup>
-import { ref, onMounted,watch } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useTaskStore } from "../stores/task";
 import { useRouter } from 'vue-router';
 import Nav from '../components/Nav.vue';
 import NewTask from '../components/NewTask.vue';
 import TaskItem from '../components/TaskItem.vue';
-import Profile from '../components/Profile.vue'
+import Footer from '../components/Footer.vue'
+
 const taskStore = useTaskStore();
+
 // Variable para guardar las tareas de supabase
 const tasks = ref([]);
+
+// Obtener la sesión del usuario desde la ruta
+const router = useRouter();
+const session = ref(router.currentRoute.value.meta.session);
+
 // Creamos una función que conecte a la store para conseguir las tareas de supabase
 const fetchTasks = async () => {
   tasks.value = await taskStore.fetchTasks();
 };
+
 onMounted(fetchTasks); // Obtener las tareas al montar el componente
+
 watch(() => taskStore.tasksArr, (newTasks) => {
   tasks.value = newTasks; // Actualizar las tareas cuando cambien en el almacén de tareas
 });
+
 const handleTaskDeleted = async (task) => {
   const confirmed = confirm("Are you sure you want to delete this task?");
   if (confirmed) {
@@ -73,8 +61,20 @@ const handleTaskDeleted = async (task) => {
 };
 </script>
 
+<style>
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+}
 
-<style></style>
+/* #taskContainer{
+background-color: brown;
+} */
+
+</style>
 
 <!-- 
 **Hints**

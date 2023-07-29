@@ -6,20 +6,46 @@ https://www.readme-templates.com/
 ## Semana 1
 
 # Martes 04/07/2023
-# Jueves 06/07/2023
-# Sabado 08/07/2023
+[Completado] 1. Revision documentacion del proyecto  
+[Completado] 2. Creacion de los componentes faltantes (Footer, perfil)
 
+# Jueves 06/07/2023
+    [Completado] 1. Creacion de la logica de conexion del TaskItem
+    [Completado] 2. Creacion de la logica de conexion del NewTask
+
+# Sabado 08/07/2023 - Domingo 09/07/2023
+    [Completado] 1. Creacion logica Account
+    
 ## Semana 2
 
-# Martes 11/07/2023
-# Jueves 13/07/2023
-# Sabado 15/07/2023
+# Martes 11/07/2023 - Sabado 15/07/2023
+    [Incompleto] 1. Creacion de la logica del perfil
+
 
 ## Semana 3
 
-# Martes 18/07/2023
-# Jueves 20/07/2023
-# Sabado 22/07/2023
+# Martes 18/07/
+    [Incompleto] 1. Creacion de la logica del perfil (conectado al local pero no se pudo lograr subir la informacion a supabase)
+
+# Jueves 20/07/2023 - Sabado 22/07/2023
+    [] 1. Sin trabajar en el proyecto por enfermedad.
+
+## Semana 4
+
+# Lunes 24/07/2023
+    1. Estilado SignIn.vue & SignOut.vue
+
+# Martes 25/07/2023
+    1. Estilado Home.vue, NewTask.vue & TaskItem.vue
+
+# Miercoles 26/07/2023
+    1. Estilado Nav.vue
+
+# Jueves 27/07/2023
+    1. Estilado Nav.vue (arreglando errores)
+
+# Viernes 28/07/2023
+    1. Creacion de presentacion y subir documentos pendientes.
 
 ## Supabase
 
